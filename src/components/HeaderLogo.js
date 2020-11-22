@@ -5,7 +5,7 @@ export default HeaderLogo = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../../src/assets/images/TRIMco_Lockup_Orange.png")}
+        source={require("../../src/assets/images/HeaderLogo.png")}
         style={{
           flex: 1,
           alignSelf: "center",
