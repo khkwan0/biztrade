@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import reducers from './src/redux/reducers'
 import ReduxThunk from 'redux-thunk'
 
-import MainScreen from './src/screens/MainScreen'
+import MainScreen from './src/screens/mainapp/MainScreen'
 
 const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
 
