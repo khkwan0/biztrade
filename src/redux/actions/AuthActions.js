@@ -4,33 +4,7 @@ import Utility from "../../library/Utility"
 
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-//import { AccessToken } from "react-native-fbsdk";
 import OneSignal from "react-native-onesignal"
-
-////////////////////////////////////////////////////// Exported function ///////////////////////////////////////////////////////////////////////
-
-// export const (actionName) = (param) => {
-//    return {
-//      type: TYPES.type,
-//      payload: param
-//    }
-//}
-
-// export const (actionName) = (param) => {
-//    return dispatch => {
-//         try {
-//             Your function here!
-
-//             dispatch({
-//                 type: TYPES.type,
-//                 payload: param
-//             })
-
-//         } catch (err) {
-//             console.log(err);
-//         }
-//    }
-// }
 
 let userData = null
 
