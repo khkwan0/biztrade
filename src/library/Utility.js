@@ -48,7 +48,27 @@ Utility = {
       throw new Error(e);
     }
   },
-  GetFromServer: async (endpoint) => {
+  GET: async (gql_query) => {  // GraphQL style
+    try {
+      let token = await AsyncStorage.getItem(config.storage.key_prefix + "jwt")
+      const headers = {}
+      if (token) {
+        headers['Authorization'] = 'Bearer ' + token
+      }
+      const res = await fetch(config.api._url() + '?query=' + gql_query , {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          Accept: "application/json",
+          ...headers
+        }
+      })
+      return res.json()
+    } catch(e) {
+      throw new Error(e)
+    }
+  },
+  GetFromServer: async (endpoint) => { // REST style
     try {
       let token = await AsyncStorage.getItem(config.storage.key_prefix + "jwt")
       const headers = {}

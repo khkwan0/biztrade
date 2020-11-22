@@ -1,5 +1,5 @@
 import * as TYPES from "./types";
-import Utility from "../../util/Utility";
+import Utility from "../../library/Utility";
 
 ////////////////////////////////////////////////////// Exported function ///////////////////////////////////////////////////////////////////////
 export const handlePostSaveCompanyEmail = (company_email, company_domain) => {
