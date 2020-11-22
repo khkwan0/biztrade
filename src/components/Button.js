@@ -65,7 +65,7 @@ const Button = props => {
           </Text>
         )}
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

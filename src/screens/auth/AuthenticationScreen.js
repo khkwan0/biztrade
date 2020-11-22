@@ -76,13 +76,13 @@ const AuthenticationScreen = props => {
 
   return (
     <ScrollView>
-      <ImageBackground source={require('../../assets/images/trimco_auth_background.jpg')} style={{width: '100%', height: '100%'}}>
+      <ImageBackground source={require('../../assets/images/auth_background.jpg')} style={{width: '100%', height: '100%'}}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <KeyboardAvoidingView style={{height:627}}>
         <View style={{flex: 1, justifyContent: 'center',alignItems:'center'}}>
         <View style={{backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: 20, width:'90%', height:'67%', flexDirection:'row', alignItems:'center', justifyContent: 'center'}}>
           <View style={{backgroundColor: 'white', paddingTop:24,paddingLeft: 13, paddingRight:13,borderRadius: 20, width:'90%', height:'90%'}}>
-            <View style={{flex:1, alignItems:'center'}}><Image source={require('../../assets/images/TRIMco_Lockup_Orange.png')} style={{height: '175%', width: '175%'}} resizeMode={'contain'} /></View>
+            <View style={{flex:1, alignItems:'center'}}><Image source={require('../../assets/images/HeaderLogo.png')} style={{height: '175%', width: '175%'}} resizeMode={'contain'} /></View>
             <View style={{flex:1, flexDirection: 'row',justifyContent:'center',alignItems:'center', marginTop:60 }}>
               <Icon name="envelope-o" size={22} />
               <View style={{borderWidth:1, borderColor: 'gray', borderRadius: 5, width: '80%', height:40,marginLeft: '2%', flex:1, justifyContent: 'center'}}>

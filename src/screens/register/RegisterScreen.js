@@ -168,7 +168,7 @@ class Register_Info extends Component {
     }
     return (
       <SafeAreaView>
-        <ImageBackground source={require('../../assets/images/trimco_background.jpg')} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../../assets/images/background.jpg')} style={{width: '100%', height: '100%'}}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
             <KeyboardAvoidingView behavior="padding" enabled style={{height: 627}}>
               <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
