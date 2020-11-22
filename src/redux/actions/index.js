@@ -1,3 +1,3 @@
-export * from '../actions/authActions'
-export * from '../actions/registerActions'
-export * from '../actions/userActions'
+export * from './authActions'
+export * from './registerActions'
+export * from './userActions'
