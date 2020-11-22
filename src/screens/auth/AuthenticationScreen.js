@@ -30,6 +30,7 @@ import config from "../../assets/configs/config"
 
 const AuthenticationScreen = props => {
 
+  console.log('auth')
   const dispatch = useDispatch()
 
   const [loading, setLoading] = React.useState(false)

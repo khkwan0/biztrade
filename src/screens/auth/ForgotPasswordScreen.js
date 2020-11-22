@@ -9,11 +9,11 @@ import {
   SafeAreaView,
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { Theme, Color } from "./../../styles";
+import { Theme, Color } from "../../styles";
 
-import TextInput from "./../../components/TextInput";
-import Button from "./../../components/Button";
-import Utility from "./../../library/Utility";
+import TextInput from "../../components/TextInput";
+import Button from "../../components/Button";
+import Utility from "../../library/Utility";
 
 const keyboardVerticalOffset = Platform.OS === "ios" ? 45 : 60;
 
