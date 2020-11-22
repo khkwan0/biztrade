@@ -4,8 +4,6 @@ import Utility from "../../library/Utility"
 
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-import OneSignal from "react-native-onesignal"
-
 let userData = null
 
 export const startLoginProcess = () => {
