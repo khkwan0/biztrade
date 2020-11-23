@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions, Platform } from "react-native";
 import normalize from "../library/TextNormalize";
 
 export const Color = {
-  primary: "#d65c26",
+  primary: "#74d14c",
   link: "hsl(204, 86%, 53%)",
   success: "hsl(141, 71%, 48%)",
   danger: "hsl(348, 100%, 61%)",

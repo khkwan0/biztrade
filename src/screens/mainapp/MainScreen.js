@@ -23,11 +23,11 @@ const MainScreen = (props) => {
   const dispatch = useDispatch()
 
   const [isMounted, setIsMounted] = React.useState(false)
-  const [showScreen, setShowScreen] = React.useState({home: false, auth: false, register: false})
+  const [showScreen, setShowScreen] = React.useState({home: true, auth: false, register: false})
 
   React.useEffect(()=> {
     if (isMounted) {
-      RNBootSplash.hide()
+//      RNBootSplash.hide()
       if (user !== undefined && user._id !== undefined && user._id) {
         setShowScreen({home: true, auth: false, register: false})
       } else {
@@ -37,12 +37,20 @@ const MainScreen = (props) => {
   }, [user])
 
   React.useEffect(() => {
-    dispatch(startLoginProcess())
+    StartLoginProcess()
   }, [isMounted])
 
   React.useEffect(() => {
     setIsMounted(true)
   }, [])
+
+  const StartLoginProcess =  () => {
+    try {
+      dispatch(startLoginProcess())
+    } catch(e) {
+      console.log(e)
+    }
+  }
 
   console.log(showScreen)
   return(
@@ -53,14 +61,14 @@ const MainScreen = (props) => {
           backBehavior="initialRoute"
           drawerContent={(props) => <DrawerContent {...props} user_type={user.is_vendor?"vendor":"client"} />}
         >
-          <Drawer.Screen name="Home" component={SCREEN.Home} />
+          <Drawer.Screen name="Home" component={SCREEN.HomeScreen} />
         </Drawer.Navigator>
       }
       {showScreen.auth &&
         <Stack.Navigator initialRouteName="Authenticate" options={{headerTitle: props => <HeaderLogo />}}>
           <Stack.Screen name="Authenticate" component={SCREEN.AuthenticationScreen} options={{headerTitle: props=> <HeaderLogo />}} />
           <Stack.Screen name="Forgot Password" component={SCREEN.ForgotPasswordScreen} />
-          <Stack.Screen name="Register" component={SCREEN.Register_Info} initialParams={{}} />
+          <Stack.Screen name="Register" component={SCREEN.RegisterScreen} initialParams={{}} />
         </Stack.Navigator>
       }
     </NavigationContainer>

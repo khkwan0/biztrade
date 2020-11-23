@@ -9,7 +9,6 @@ import MainScreen from './src/screens/mainapp/MainScreen'
 const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
 
 const App = () => {
-console.log('being')
   return(
     <Provider store={store}>
       <MainScreen />

@@ -55,7 +55,10 @@ Utility = {
       if (token) {
         headers['Authorization'] = 'Bearer ' + token
       }
-      const res = await fetch(config.api._url() + '?query=' + gql_query , {
+      console.log(encodeURI(config.api._url() + '/graphql?query=' + gql_query))
+//      const res = await fetch("https://api.kkith.com/graphql?query=%7Buser(queryby:%20%22email%22,%20val:%22khkwan0%22)%20%7Bname%7D%7D", {method:"GET", credentials:"include", headers:{Accept:"application/json"}})
+
+      const res = await fetch(encodeURI(config.api._url() + '/graphql?query=' + gql_query), {
         method: "GET",
         credentials: "include",
         headers: {
@@ -63,15 +66,16 @@ Utility = {
           ...headers
         }
       })
-      return res.json()
+      const json = await res.json()
+      return json
     } catch(e) {
       throw new Error(e)
     }
   },
   GetFromServer: async (endpoint) => { // REST style
     try {
-      let token = await AsyncStorage.getItem(config.storage.key_prefix + "jwt")
       const headers = {}
+      let token = await AsyncStorage.getItem(config.storage.key_prefix + "jwt")
       if (token) {
         headers['Authorization'] = 'Bearer ' + token
       }

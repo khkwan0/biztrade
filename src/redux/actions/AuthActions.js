@@ -9,12 +9,12 @@ let userData = null
 export const startLoginProcess = () => {
   return async dispatch => {
     console.log('startloginprocess')
+    console.log(config.app.version())
     try {
       // Check if signed in before
       let user = null
       try {
-        res = await Utility.GET('{user(queryby: "token", val:"") {user}')
-        console.log(res)
+        const res = await Utility.GET('{user(queryby: "email", val:"khkwan0") {name}}')
       } catch(e) {
         console.log(e)
         throw new Error(e)

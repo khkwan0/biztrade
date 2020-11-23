@@ -33,7 +33,7 @@ const DrawerContent = props => {
       <SafeAreaView style={{flexGrow: 1}}>
         <View style={{flexGrow: 1}}>
           <View style={{alignItems: "center", marginVertical: 5}}>
-            <TrimCoHeaderLogo />
+            <HeaderLogo />
           </View>
           <View>
             <DrawerItem

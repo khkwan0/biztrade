@@ -1,9 +1,19 @@
 import React from 'react'
-import {View} from 'react-native'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import DashboardScreen from './DashboardScreen'
+import ForSaleScreen from './ForSaleScreen'
+import ListingsScreen from './ListingsScreen'
+
+const Tab = createBottomTabNavigator()
 
 const HomeScreen = props => {
   return(
-    <View></View>
+    <Tab.Navigator>
+      <Tab.Screen name="Dashboard" component={DashboardScreen} />
+      <Tab.Screen name="For Sale" component={ForSaleScreen} />
+      <Tab.Screen name="Your listings" component={ListingsScreen} />
+    </Tab.Navigator>
+
   )
 }
 
