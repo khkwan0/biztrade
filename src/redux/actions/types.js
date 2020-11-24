@@ -31,3 +31,6 @@ export const REMOVE_MESSAGE = "remove_message"
 export const GET_MESSAGES = "get_messages"
 
 export const SET_HEADER = "set_header"
+
+export const SET_LISTINGS = "set_listings"
+export const APPEND_LISTINGS = "append_listings"
