@@ -59,6 +59,8 @@ const NewListingScreen = props => {
       </View>
       <View>
         <FlatList
+          
+          numColumns={4}
         />
       </View>
     </View>
