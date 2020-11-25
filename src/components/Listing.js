@@ -20,7 +20,7 @@ const Listing = props => {
         <Text>{props.country}</Text>
       </View>
       <View>
-        <Pressable onPress={}><Text></Text></Pressable>
+        <Pressable onPress={()=>{}}><Text></Text></Pressable>
       </View>
       
     </View>

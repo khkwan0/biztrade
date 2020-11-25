@@ -31,13 +31,16 @@ const MainScreen = (props) => {
       if (user !== undefined && user._id !== undefined && user._id) {
         setShowScreen({home: true, auth: false, register: false})
       } else {
-        setShowScreen({home: false, auth: true, register: false})
+        //setShowScreen({home: false, auth: true, register: false})
+        setShowScreen({home: true, auth: false, register: false}) // testing hack
       }
     }
   }, [user])
 
   React.useEffect(() => {
-    StartLoginProcess()
+    if (isMounted) {
+      StartLoginProcess()
+    }
   }, [isMounted])
 
   React.useEffect(() => {

@@ -39,7 +39,6 @@ export const startLoginProcess = () => {
       }
     } catch (err) {
       console.log("Start login process catch", err.message)
-      throw new Error(err)
     }
   }
 }
